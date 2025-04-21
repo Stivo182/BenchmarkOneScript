@@ -1,0 +1,8 @@
+.vs
+/.vscode
+/Components
+/out
+obj
+bin
+oscript_modules
+*.ospx

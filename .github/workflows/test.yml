@@ -1,0 +1,46 @@
+name: Тестирование
+
+on: 
+  push:
+  pull_request:
+
+env:
+  TEST_SCRIPT_PATH: './tasks/test.os'
+  ADDITIONAL_OSCRIPT_PACKAGES: '1commands'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        oscript_version: [stable, dev]
+        
+    steps:
+      - name: Актуализация
+        uses: actions/checkout@v4
+
+      - name: Установка .NET
+        uses: actions/setup-dotnet@v4.0.0
+        with:
+          dotnet-version: 8.x.x
+      
+      - name: Установка OneScript
+        uses: otymko/setup-onescript@master
+        with:
+          version: ${{ matrix.oscript_version }}
+
+      - name: Установка зависимостей
+        run: |
+          opm install opm
+          opm install -l --dev
+      
+      - name: Установка дополнительных пакетов
+        run: opm install ${{ env.ADDITIONAL_OSCRIPT_PACKAGES }}
+
+      - name: Сборка пакета
+        run: opm build
+        
+      - name: Тестирование
+        run: oscript ${{ env.TEST_SCRIPT_PATH }}
