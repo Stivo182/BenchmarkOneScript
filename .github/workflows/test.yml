@@ -7,7 +7,6 @@ on:
 
 env:
   TEST_SCRIPT_PATH: './tasks/test.os'
-  ADDITIONAL_OSCRIPT_PACKAGES: '1commands'
 
 jobs:
   build:
@@ -37,9 +36,6 @@ jobs:
           opm install opm
           opm install -l --dev
       
-      - name: Установка дополнительных пакетов
-        run: opm install ${{ env.ADDITIONAL_OSCRIPT_PACKAGES }}
-
       - name: Сборка пакета
         run: opm build
         
