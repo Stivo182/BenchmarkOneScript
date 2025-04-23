@@ -12,6 +12,7 @@
     .ВерсияСреды("1.9.2")
     .ВключитьФайл("src/BenchmarkOneScript")
     .ВключитьФайл("Components")
+    .ВключитьФайл("samples")
     .ВключитьФайл("packagedef")
     .ВключитьФайл("package-loader.os")
     .ВключитьФайл("README.md")
