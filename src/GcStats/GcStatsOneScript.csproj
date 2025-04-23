@@ -15,12 +15,7 @@
 	</PropertyGroup>
 	
 	<ItemGroup Condition="'$(TargetFramework)'=='net6.0'">
-		<Reference Include="OneScript.Core">
-			<HintPath>dependencies\netcore\OneScript.Core.dll</HintPath>
-		</Reference>
-		<Reference Include="ScriptEngine">
-			<HintPath>dependencies\netcore\ScriptEngine.dll</HintPath>
-		</Reference>
+		<PackageReference Include="OneScript.StandardLibrary" Version="2.0.0-rc6" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)'=='net48'">
