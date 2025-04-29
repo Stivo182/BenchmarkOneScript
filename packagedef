@@ -27,4 +27,4 @@
     .РазработкаЗависитОт("1testrunner")
     .РазработкаЗависитОт("coverage")
     .РазработкаЗависитОт("1commands")
-    .ИсполняемыйФайл("src/BenchmarkOneScript/cli/main.os", "benchos")
+    .ИсполняемыйФайл("src/BenchmarkOneScript/cmd/main.os", "benchos")
