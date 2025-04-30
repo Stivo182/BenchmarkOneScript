@@ -9,5 +9,5 @@ oscript [FILE]
 Например:
 
 ```bash
-oscript ./БенчмаркБазовый.os
+oscript ./ЗапускБенчмарковПример.os
 ```
