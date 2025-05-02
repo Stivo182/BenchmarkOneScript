@@ -1,0 +1,12 @@
+{
+    "diagnostics": {
+        "parameters": {
+            "IncorrectLineBreak": {
+                "listOfIncorrectFirstSymbol": ";|,\\s*\\S+"
+            },
+            "Typo": {
+                "userWordsToIgnore": "Бенчмарк,Бенчмарки,Бенчмарков,Бенчмарка,Прогревочных,Запускатель,Распарсить"
+            }
+        }
+    }
+}
