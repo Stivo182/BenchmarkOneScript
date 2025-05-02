@@ -1,6 +1,9 @@
 
 # BenchmarkOneScript
 
+[![Release](https://img.shields.io/github/release/Stivo182/BenchmarkOneScript.svg)](https://github.com/Stivo182/BenchmarkOneScript/releases)
+[![Покрытие](https://sonar.openbsl.ru/api/project_badges/measure?project=benchmark&metric=coverage&token=sqb_3054e7cdc0478fa1fc9ec12e319b76086791667e)](https://sonar.openbsl.ru/dashboard?id=benchmark)
+
 <div>
 	<a href="docs/БыстрыйСтарт.md">Быстрый старт</a>
 	<span> · </span>
