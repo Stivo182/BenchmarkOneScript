@@ -12,6 +12,7 @@
     .ВключитьФайл("src/BenchmarkOneScript")
     .ВключитьФайл("Components")
     .ВключитьФайл("samples")
+    .ВключитьФайл("docs")
     .ВключитьФайл("packagedef")
     .ВключитьФайл("package-loader.os")
     .ВключитьФайл("README.md")
