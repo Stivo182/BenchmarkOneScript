@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Отчет>
     <СредаОкружения>
-        <ВерсияBenchmarkOneScript>v0.1.x-mock</ВерсияBenchmarkOneScript>
+        <ВерсияBenchmarkOneScript>0.1.x-mock</ВерсияBenchmarkOneScript>
         <ВерсияOneScript>2.0.0.0-mock</ВерсияOneScript>
         <ВерсияОС>Microsoft Windows NT 10.0.x.mock</ВерсияОС>
         <ИмяПроцессора>MockIntel Core i7-6700HQ CPU 2.60GHz</ИмяПроцессора>

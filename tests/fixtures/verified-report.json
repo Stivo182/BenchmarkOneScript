@@ -1,6 +1,6 @@
 {
 	"СредаОкружения": {
-		"ВерсияBenchmarkOneScript": "v0.1.x-mock",
+		"ВерсияBenchmarkOneScript": "0.1.x-mock",
 		"ВерсияOneScript": "2.0.0.0-mock",
 		"ВерсияОС": "Microsoft Windows NT 10.0.x.mock",
 		"ИмяПроцессора": "MockIntel Core i7-6700HQ CPU 2.60GHz",
