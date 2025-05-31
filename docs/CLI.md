@@ -13,7 +13,7 @@ benchos run [OPTIONS] [FILE]
 | Опция | Описание | Пример |
 | --- | --- | --- | 
 | `-r`, `--recursive` | Рекурсивный поиск в поддиректориях | |
-| `--iterationCount` | Количество измерительных итераций | `--iterationCount 10 ` |
+| `--iterationCount` | Количество измерительных итераций | `--iterationCount 10` |
 | `--iterationTime` | Минимальное время выполнения одной итерации (мс) | `--iterationTime 500` |
 | `--warmupCount` | Количество прогревочных итераций | `--warmupCount 10` |
 | `--invocationCount` | Количество вызовов метода за итерацию | `--invocationCount 100` |
