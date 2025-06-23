@@ -1,6 +1,5 @@
 // BSLLS:MissingVariablesDescription-off
 
-#Использовать "../../../../"
 #Использовать fs
 #Использовать logos
 
