@@ -13,9 +13,9 @@ public class TypeExtension : AutoContext<TypeExtension>
     [ContextProperty("Источник", "Source")]
     public string Source =>
 #if NET6_0_OR_GREATER
-        AttachedScriptsFactory.GetModuleOfType(_type.ToString()).Source.Location ?? "";
+        AttachedScriptsFactory.GetModuleOfType(_type.ToString())?.Source?.Location ?? "";
 #else
-        AttachedScriptsFactory.GetModuleOfType(_type.ToString()).ModuleInfo.Origin ?? "";
+        AttachedScriptsFactory.GetModuleOfType(_type.ToString())?.ModuleInfo?.Origin ?? "";
 #endif
     
     IValue _type;
