@@ -15,14 +15,14 @@ public class ObjectExtension : AutoContext<ObjectExtension>
     
     IValue _Object;
 
-    public ObjectExtension(IValue Object)
+    public ObjectExtension(IValue obj)
     {
-        _Object = Object;
+        _Object = obj;
     }
 
     [ScriptConstructor]
-    public static ObjectExtension Constructor(IValue type)
+    public static ObjectExtension Constructor(IValue obj)
     {
-        return new ObjectExtension(type);
+        return new ObjectExtension(obj);
     }
 }
