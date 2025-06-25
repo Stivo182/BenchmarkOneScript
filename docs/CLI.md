@@ -16,11 +16,11 @@ benchos run [OPTIONS] [FILE]
 | `--iterationTime` | Минимальное время выполнения одной итерации (мс) | `--iterationTime 500` |
 | `--warmupCount` | Количество прогревочных итераций | `--warmupCount 10` |
 | `--invocationCount` | Количество вызовов метода за итерацию | `--invocationCount 100` |
-| `--runtime` | Версии OneScript через запятую (current, stable, dev, x.x.x) | `--runtime dev,stable` |
+| `--runtime` | Версии OneScript через запятую (current, stable, dev, x.x.x). | `--runtime dev,stable` |
 | `--throughput` | Стратегия выполнения [`ПропускнаяСпособность`](СредаВыполнения.md#пропускнаяспособность) | |
 | `--coldstart` | Стратегия выполнения [`ХолодныйЗапуск`](СредаВыполнения.md#холодныйзапуск) | |
-| `-m`, `--memory` | Включить мониторинг использования памяти | |
-| `-e`, `--exporters` | Форматы экспорта результатов (`md`, `json`, `xml`, `html`) | `-e json,xml` |
+| `-m`, `--memory` | Включить [мониторинг использования памяти](МониторингПамяти.md) | |
+| `-e`, `--exporters` | Форматы [экспорта результатов](ЭкспортРезультатов.md) (`md`, `json`, `xml`, `html`) | `-e json,xml` |
 | `-a`, `--artifacts` | Каталог для сохранения результатов | `-a path/to/file` |
 | `-r`, `--recursive` | Рекурсивный поиск в поддиректориях | |
 | `-c`, `--config` | Файл конфигурации бенчмарков в формате JSON | `-c path/to/config.json` |
