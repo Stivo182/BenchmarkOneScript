@@ -8,8 +8,10 @@ on:
 jobs:
   sonar:
     if: github.repository_owner == 'stivo182'
-    uses: Stivo182/oscript-workflows/.github/workflows/sonar-dotnet.yml@main
+    uses: autumn-library/workflows/.github/workflows/sonar.yml@v1
     with:
       github_repository: Stivo182/BenchmarkOneScript
+      dotnet_version: "8.x.x"
+      build_package: true
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

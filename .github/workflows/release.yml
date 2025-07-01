@@ -1,62 +1,16 @@
-name: Публикация в хаб
+name: Публикация релиза
 
 on:
   release:
     types:
       - published
-
-env:
-  PACKAGE_MASK: "benchmark-*.ospx"
-  OSCRIPT_VERSION: "default"
+  workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Актуализация
-        uses: actions/checkout@v4
-
-      - name: Установка .NET
-        uses: actions/setup-dotnet@v4.0.0
-        with:
-          dotnet-version: 8.x.x
-          
-      - name: Вычисление версии OneScript
-        shell: bash
-        id: extract_oscript_version
-        run: |
-          set -ex
-          if [ "${{ env.OSCRIPT_VERSION }}" = "default" ]
-          then
-            extracted_version=$(cat packagedef | grep ".ВерсияСреды(" | sed 's|[^"]*"||' | sed -r 's/".+//' || true)
-            version="${extracted_version:-stable}"
-          else
-            version="${{ env.OSCRIPT_VERSION }}"
-          fi
-          echo "version=$version" >> $GITHUB_OUTPUT
-      
-      - name: Установка OneScript
-        uses: otymko/setup-onescript@v1.4
-        with:
-          version: ${{ steps.extract_oscript_version.outputs.version }}
-
-      - name: Установка зависимостей
-        run: |
-          opm install opm
-          opm install -l
-
-      - name: Сборка пакета
-        run: opm build
-
-      - name: Заливка артефактов
-        uses: actions/upload-artifact@v4
-        with:
-          name: package.zip
-          path: ./${{ env.PACKAGE_MASK }}
- 
-      - name: Публикация в hub.oscript.io
-        shell: bash
-        env:
-          GITHUB_OAUTH_TOKEN: ${{ secrets.PUSH_TOKEN }}
-          OPM_HUB_CHANNEL: stable
-        run: opm push ${{ env.PACKAGE_MASK }}
+  release:
+    uses: autumn-library/workflows/.github/workflows/release.yml@v1
+    with:
+      package_mask: "benchmark-*.ospx"
+      dotnet_version: "8.x.x"
+    secrets:
+      PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}

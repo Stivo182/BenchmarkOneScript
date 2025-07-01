@@ -1,43 +1,18 @@
 name: Тестирование
 
-on: 
+on:
   push:
   pull_request:
   workflow_dispatch:
 
-env:
-  TEST_SCRIPT_PATH: './tasks/test.os'
-
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
+  test:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
-        oscript_version: [stable, dev]
-        
-    steps:
-      - name: Актуализация
-        uses: actions/checkout@v4
-
-      - name: Установка .NET
-        uses: actions/setup-dotnet@v4.0.0
-        with:
-          dotnet-version: 8.x.x
-      
-      - name: Установка OneScript
-        uses: otymko/setup-onescript@master
-        with:
-          version: ${{ matrix.oscript_version }}
-
-      - name: Установка зависимостей
-        run: |
-          opm install opm
-          opm install -l --dev
-      
-      - name: Сборка пакета
-        run: opm build
-        
-      - name: Тестирование
-        run: oscript ${{ env.TEST_SCRIPT_PATH }}
+        oscript_version: ['stable', 'dev']
+    uses: autumn-library/workflows/.github/workflows/test.yml@v1
+    with:
+      oscript_version: ${{ matrix.oscript_version }}
+      dotnet_version: "8.x.x"
+      build_package: true
