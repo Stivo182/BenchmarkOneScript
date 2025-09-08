@@ -32,6 +32,8 @@
     .ЗависитОт("tempfiles", "1.1.1")
     .ЗависитОт("packageinfo", "1.0")
     .ЗависитОт("1commands", "1.5.0")
+    .ЗависитОт("jason", "0.3.0")
+    .ЗависитОт("validate", "0.3.0")
     .РазработкаЗависитОт("1testrunner")
     .РазработкаЗависитОт("coverage")
     .ИсполняемыйФайл("src/BenchmarkOneScript/cmd/main.os", "benchos")
