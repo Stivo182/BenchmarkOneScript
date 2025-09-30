@@ -1,0 +1,19 @@
+name: Ежедневное обновление зависимостей
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Ежедневно в 8:00 утра
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Обновление зависимостей
+        uses: Stivo182/depos-action@main
+        with:
+          message-prefix: build(deps)
