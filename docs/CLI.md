@@ -23,7 +23,7 @@ benchos run [OPTIONS] [FILE]
 | `-e`, `--exporters` | Форматы [экспорта результатов](ЭкспортРезультатов.md) (`md`, `json`, `xml`, `html`) | `-e json,xml` |
 | `-a`, `--artifacts` | Каталог для сохранения результатов | `-a path/to/file` |
 | `-r`, `--recursive` | Рекурсивный поиск в поддиректориях | |
-| `-c`, `--config` | Файл конфигурации бенчмарков в формате JSON | `-c path/to/config.json` |
+| `--settings` | Файл настроек бенчмарков в формате JSON | `--settings path/to/settings.json` |
 
 ## Примеры
 
