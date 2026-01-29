@@ -35,6 +35,7 @@
     .ЗависитОт("validate", "0.3.0")
     .ЗависитОт("reflector", "0.7.1")
     .ЗависитОт("collectionos", "0.8.2")
+    .ЗависитОт("allocs", "0.1.0")
     .РазработкаЗависитОт("1testrunner")
     .РазработкаЗависитОт("coverage")
     .ИсполняемыйФайл("src/BenchmarkOneScript/cmd/main.os", "benchos")
