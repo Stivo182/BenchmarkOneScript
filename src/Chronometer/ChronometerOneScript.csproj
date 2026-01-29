@@ -23,7 +23,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Perfolizer" Version="0.4.0" />
+	  <PackageReference Include="Perfolizer" Version="0.5.3" />
 	</ItemGroup>
 	
 </Project>
