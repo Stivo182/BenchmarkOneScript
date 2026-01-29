@@ -26,7 +26,10 @@
 			}
 		],
 		"ParameterSources": [],
-		"Columns": [],
+		"Columns": [
+			"Мин",
+			"Макс"
+		],
 		"RuntimeVersions": [],
 		"Handlers": [],
 		"Exporters": [
@@ -35,25 +38,40 @@
 	},
 	"BenchmarkDescriptors": [
 		{
-			"Type": "ДваБенчмаркаИПоле",
+			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркПервый",
 			"Baseline": false,
 			"Category": "",
-			"ParameterSets": [],
+			"ParameterSets": [
+				[
+					{
+						"Name": "П1",
+						"Value": 1,
+						"IsMethodParameter": true
+					},
+					{
+						"Name": "П2",
+						"Value": "Тест",
+						"IsMethodParameter": true
+					}
+				]
+			],
 			"ParameterSources": []
 		},
 		{
-			"Type": "ДваБенчмаркаИПоле",
+			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркВторой",
 			"Baseline": false,
 			"Category": "",
 			"ParameterSets": [],
-			"ParameterSources": []
+			"ParameterSources": [
+				"ПараметрыДляВторого"
+			]
 		}
 	],
 	"Runs": [
 		{
-			"Type": "ДваБенчмаркаИПоле",
+			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркПервый",
 			"Category": "",
 			"Baseline": false,
@@ -191,11 +209,13 @@
 				}
 			],
 			"Parameters": {
-				"Значение": 100
+				"Значение": 100,
+				"П1": 1,
+				"П2": "Тест"
 			}
 		},
 		{
-			"Type": "ДваБенчмаркаИПоле",
+			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркВторой",
 			"Category": "",
 			"Baseline": false,
@@ -333,7 +353,8 @@
 				}
 			],
 			"Parameters": {
-				"Значение": 100
+				"Значение": 100,
+				"П": "2000-01-01T00:00:00"
 			}
 		}
 	]
