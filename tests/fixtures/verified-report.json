@@ -33,26 +33,24 @@
 			"ЭкспортерРезультатовБенчмарковВJson"
 		]
 	},
-	"BenchmarkDescriptors": {
-		"Items": [
-			{
-				"Type": "ДваБенчмаркаИПоле",
-				"Method": "БенчмаркПервый",
-				"Baseline": false,
-				"Category": "",
-				"ParameterSets": [],
-				"ParameterSources": []
-			},
-			{
-				"Type": "ДваБенчмаркаИПоле",
-				"Method": "БенчмаркВторой",
-				"Baseline": false,
-				"Category": "",
-				"ParameterSets": [],
-				"ParameterSources": []
-			}
-		]
-	},
+	"BenchmarkDescriptors": [
+		{
+			"Type": "ДваБенчмаркаИПоле",
+			"Method": "БенчмаркПервый",
+			"Baseline": false,
+			"Category": "",
+			"ParameterSets": [],
+			"ParameterSources": []
+		},
+		{
+			"Type": "ДваБенчмаркаИПоле",
+			"Method": "БенчмаркВторой",
+			"Baseline": false,
+			"Category": "",
+			"ParameterSets": [],
+			"ParameterSources": []
+		}
+	],
 	"Runs": [
 		{
 			"Type": "ДваБенчмаркаИПоле",
