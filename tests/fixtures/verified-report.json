@@ -1,173 +1,82 @@
 {
-	"СредаОкружения": {
-		"ВерсияBenchmarkOneScript": "0.1.x-mock",
-		"ВерсияОС": "Microsoft Windows NT 10.0.x.mock",
-		"ВерсияИсполняющейСреды": "2.0.0-mock",
-		"ИмяПроцессора": "MockIntel Core i7-6700HQ CPU 2.60GHz",
-		"КоличествоПроцессоров": 1,
-		"КоличествоЯдер": 4,
-		"КоличествоЛогическихПроцессоров": 8
+	"HostEnvironmentInfo": {
+		"BenchmarkOneScriptVersion": "0.1.x-mock",
+		"OsVersion": "Microsoft Windows NT 10.0.x.mock",
+		"RuntimeVersion": "2.0.0-mock",
+		"ProcessorName": "MockIntel Core i7-6700HQ CPU 2.60GHz",
+		"PhysicalProcessorCount": 1,
+		"PhysicalCoreCount": 4,
+		"LogicalCoreCount": 8
 	},
-	"Бенчмарки": [
+	"Configuration": {
+		"Strategy": "ПропускнаяСпособность",
+		"IterationCount": 10,
+		"InvocationCount": 1,
+		"WarmupCount": 1,
+		"MinIterationTime": 10,
+		"MinInvocationCount": 4,
+		"ReportSorting": "ПоУмолчанию",
+		"Memory": false,
+		"ArtifactsDirectory": ".\\BenchmarkArtifacts",
+		"Parameters": [
+			{
+				"Name": "Значение",
+				"Value": 100,
+				"IsMethodParameter": false
+			}
+		],
+		"ParameterSources": [],
+		"Columns": [
+			"Мин",
+			"Макс"
+		],
+		"RuntimeVersions": [],
+		"Handlers": [],
+		"Exporters": [
+			"ЭкспортерРезультатовБенчмарковВJson"
+		]
+	},
+	"BenchmarkDescriptors": [
 		{
-			"Тип": "ДваБенчмаркаИПоле",
-			"Метод": "БенчмаркПервый",
-			"Категория": "",
-			"ЭтоЭталон": false,
-			"ИсполняющаяСреда": {
-				"Версия": "",
-				"Алиас": "",
-				"Наименование": ""
-			},
-			"Параметры": {
-				"Значение": 100
-			},
-			"Статистика": {
-				"Значения": [
-					1000000,
-					1000000,
-					1000000,
-					1000000,
-					1000000,
-					1000000,
-					1000000,
-					1000000,
-					1000000,
-					1000000
-				],
-				"Количество": 10,
-				"Мин": 1000000,
-				"Q1": 1000000,
-				"Медиана": 1000000,
-				"Среднее": 1000000,
-				"Q3": 1000000,
-				"Макс": 1000000,
-				"СтандартноеОтклонение": 0,
-				"СтандартнаяОшибкаСреднего": 0,
-				"ОперацийВСекунду": 1000,
-				"Процентили": {
-					"P0": 1000000,
-					"P25": 1000000,
-					"P50": 1000000,
-					"P67": 1000000,
-					"P80": 1000000,
-					"P85": 1000000,
-					"P90": 1000000,
-					"P95": 1000000,
-					"P100": 1000000
-				},
-				"Память": {
-					"ВыделяемаяЗаОперацию": 0
-				}
-			},
-			"Замеры": [
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 1,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				},
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 2,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				},
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 3,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				},
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 4,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				},
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 5,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				},
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 6,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				},
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 7,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				},
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 8,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				},
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 9,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				},
-				{
-					"Этап": "Измерение",
-					"НомерИтерации": 10,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
-				}
-			]
+			"Type": "БенчмаркиДляЭкспорта",
+			"Method": "БенчмаркПервый",
+			"Baseline": false,
+			"Category": "",
+			"ParameterSets": [
+				[
+					{
+						"Name": "П1",
+						"Value": 1,
+						"IsMethodParameter": true
+					},
+					{
+						"Name": "П2",
+						"Value": "Тест",
+						"IsMethodParameter": true
+					}
+				]
+			],
+			"ParameterSources": []
 		},
 		{
-			"Тип": "ДваБенчмаркаИПоле",
-			"Метод": "БенчмаркВторой",
-			"Категория": "",
-			"ЭтоЭталон": false,
-			"ИсполняющаяСреда": {
-				"Версия": "",
-				"Алиас": "",
-				"Наименование": ""
-			},
-			"Параметры": {
-				"Значение": 100
-			},
-			"Статистика": {
-				"Значения": [
+			"Type": "БенчмаркиДляЭкспорта",
+			"Method": "БенчмаркВторой",
+			"Baseline": false,
+			"Category": "",
+			"ParameterSets": [],
+			"ParameterSources": [
+				"ПараметрыДляВторого"
+			]
+		}
+	],
+	"Runs": [
+		{
+			"Type": "БенчмаркиДляЭкспорта",
+			"Method": "БенчмаркПервый",
+			"Category": "",
+			"Baseline": false,
+			"Statistics": {
+				"OriginalValues": [
 					1000000,
 					1000000,
 					1000000,
@@ -179,17 +88,18 @@
 					1000000,
 					1000000
 				],
-				"Количество": 10,
-				"Мин": 1000000,
+				"N": 10,
+				"Min": 1000000,
 				"Q1": 1000000,
-				"Медиана": 1000000,
-				"Среднее": 1000000,
+				"Median": 1000000,
+				"Mean": 1000000,
 				"Q3": 1000000,
-				"Макс": 1000000,
-				"СтандартноеОтклонение": 0,
-				"СтандартнаяОшибкаСреднего": 0,
-				"ОперацийВСекунду": 1000,
-				"Процентили": {
+				"Max": 1000000,
+				"StdDev": 0,
+				"StdErr": 0,
+				"Ops": 1000,
+				"BytesAllocatedPerOperation": 0,
+				"Percentiles": {
 					"P0": 1000000,
 					"P25": 1000000,
 					"P50": 1000000,
@@ -199,103 +109,253 @@
 					"P90": 1000000,
 					"P95": 1000000,
 					"P100": 1000000
-				},
-				"Память": {
-					"ВыделяемаяЗаОперацию": 0
 				}
 			},
-			"Замеры": [
+			"Runtime": {
+				"Version": "",
+				"Alias": "",
+				"Name": ""
+			},
+			"Measurements": [
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 1,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 1,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				},
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 2,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 2,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				},
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 3,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 3,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				},
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 4,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 4,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				},
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 5,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 5,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				},
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 6,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 6,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				},
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 7,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 7,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				},
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 8,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 8,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				},
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 9,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 9,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				},
 				{
-					"Этап": "Измерение",
-					"НомерИтерации": 10,
-					"КоличествоОпераций": 1,
-					"Наносекунд": 1000000,
-					"НаносекундЗаОперацию": 1000000,
-					"ВыделяемаяПамять": 0,
-					"ВыделяемаяПамятьЗаОперацию": 0
+					"Stage": "Измерение",
+					"IterationNumber": 10,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
 				}
-			]
+			],
+			"Parameters": {
+				"Значение": 100,
+				"П1": 1,
+				"П2": "Тест"
+			}
+		},
+		{
+			"Type": "БенчмаркиДляЭкспорта",
+			"Method": "БенчмаркВторой",
+			"Category": "",
+			"Baseline": false,
+			"Statistics": {
+				"OriginalValues": [
+					1000000,
+					1000000,
+					1000000,
+					1000000,
+					1000000,
+					1000000,
+					1000000,
+					1000000,
+					1000000,
+					1000000
+				],
+				"N": 10,
+				"Min": 1000000,
+				"Q1": 1000000,
+				"Median": 1000000,
+				"Mean": 1000000,
+				"Q3": 1000000,
+				"Max": 1000000,
+				"StdDev": 0,
+				"StdErr": 0,
+				"Ops": 1000,
+				"BytesAllocatedPerOperation": 0,
+				"Percentiles": {
+					"P0": 1000000,
+					"P25": 1000000,
+					"P50": 1000000,
+					"P67": 1000000,
+					"P80": 1000000,
+					"P85": 1000000,
+					"P90": 1000000,
+					"P95": 1000000,
+					"P100": 1000000
+				}
+			},
+			"Runtime": {
+				"Version": "",
+				"Alias": "",
+				"Name": ""
+			},
+			"Measurements": [
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 1,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				},
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 2,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				},
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 3,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				},
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 4,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				},
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 5,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				},
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 6,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				},
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 7,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				},
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 8,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				},
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 9,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				},
+				{
+					"Stage": "Измерение",
+					"IterationNumber": 10,
+					"OperationCount": 1,
+					"Nanoseconds": 1000000,
+					"NanosecondsPerOperation": 1000000,
+					"AllocatedMemory": 0,
+					"AllocatedMemoryPerOperation": 0
+				}
+			],
+			"Parameters": {
+				"Значение": 100,
+				"П": "Массив"
+			}
 		}
 	]
 }

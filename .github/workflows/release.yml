@@ -12,5 +12,6 @@ jobs:
     with:
       package_mask: "benchmark-*.ospx"
       dotnet_version: "8.x.x"
+      locale: "en_US"
     secrets:
       PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}

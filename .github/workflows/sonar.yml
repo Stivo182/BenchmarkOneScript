@@ -13,5 +13,6 @@ jobs:
       github_repository: Stivo182/BenchmarkOneScript
       dotnet_version: "8.x.x"
       build_package: true
+      locale: "en_US"
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

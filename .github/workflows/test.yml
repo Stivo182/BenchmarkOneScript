@@ -16,3 +16,4 @@ jobs:
       oscript_version: ${{ matrix.oscript_version }}
       dotnet_version: "8.x.x"
       build_package: true
+      locale: "en_US"
