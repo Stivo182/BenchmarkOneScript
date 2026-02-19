@@ -18,11 +18,6 @@ namespace OscriptChronometer
 
         private Perfolizer.Horology.StartedClock _Clock;
 
-        static Chronometer()
-        {
-            AppDomain.CurrentDomain.AssemblyResolve += AssemblyResolve;
-        }
-
         [ScriptConstructor]
         public static Chronometer Constructor()
         {
@@ -40,16 +35,6 @@ namespace OscriptChronometer
         {
             var clockElapsed = _Clock.GetElapsed();
             Nanoseconds = (decimal) clockElapsed.GetNanoseconds();
-        }
-
-        static Assembly AssemblyResolve(object sender, ResolveEventArgs args)
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-            string libPath = Path.Combine(
-                    Path.GetDirectoryName(assembly.Location),
-                    new AssemblyName(args.Name).Name + ".dll");
-
-            return Assembly.LoadFile(libPath);
         }
     }
 }
