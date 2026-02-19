@@ -21,9 +21,5 @@
 	<ItemGroup Condition="'$(TargetFramework)'=='net48'">
 		<PackageReference Include="OneScript.StandardLibrary" Version="1.9.2" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="Perfolizer" Version="0.5.3" />
-	</ItemGroup>
 	
 </Project>
