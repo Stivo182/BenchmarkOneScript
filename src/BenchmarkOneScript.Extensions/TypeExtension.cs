@@ -1,4 +1,4 @@
-﻿#if NET6_0_OR_GREATER
+﻿#if NETCOREAPP
 using OneScript.Contexts;
 #endif
 
@@ -12,7 +12,7 @@ public class TypeExtension : AutoContext<TypeExtension>
 {
     [ContextProperty("Источник", "Source")]
     public string Source =>
-#if NET6_0_OR_GREATER
+#if NETCOREAPP
         AttachedScriptsFactory.GetModuleOfType(_type.ToString())?.Source?.Location ?? "";
 #else
         AttachedScriptsFactory.GetModuleOfType(_type.ToString())?.ModuleInfo?.Origin ?? "";

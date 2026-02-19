@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using ScriptEngine.Machine.Contexts;
 
-#if NET6_0_OR_GREATER
+#if NETCOREAPP
 using OneScript.Contexts;
 #endif
 
