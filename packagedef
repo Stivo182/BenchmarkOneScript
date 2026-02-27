@@ -38,4 +38,5 @@
     .ЗависитОт("allocs", "0.1.0")
     .РазработкаЗависитОт("1testrunner")
     .РазработкаЗависитОт("coverage")
+    .РазработкаЗависитОт("strings")
     .ИсполняемыйФайл("src/BenchmarkOneScript/cmd/main.os", "benchos")

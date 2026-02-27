@@ -22,16 +22,26 @@
 			{
 				"Name": "Значение",
 				"Value": 100,
+				"TextValue": "100",
 				"IsMethodParameter": false
 			}
 		],
 		"ParameterSources": [],
+		"Handlers": [
+			{
+				"Event": "ПослеКаждого",
+				"Handler": "ОбработчикиСобытийБенчмарков.УстановкаВремени"
+			},
+			{
+				"Event": "ПослеВсех",
+				"Handler": "ОбработчикиСобытийБенчмарков.УстановкаМокСредыОкружения"
+			}
+		],
 		"Columns": [
 			"Мин",
 			"Макс"
 		],
 		"RuntimeVersions": [],
-		"Handlers": [],
 		"Exporters": [
 			"ЭкспортерРезультатовБенчмарковВJson"
 		]
@@ -47,11 +57,13 @@
 					{
 						"Name": "П1",
 						"Value": 1,
+						"TextValue": "1",
 						"IsMethodParameter": true
 					},
 					{
 						"Name": "П2",
 						"Value": "Тест",
+						"TextValue": "Тест",
 						"IsMethodParameter": true
 					}
 				]
@@ -74,6 +86,26 @@
 			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркПервый",
 			"Category": "",
+			"Parameters": [
+				{
+					"Name": "Значение",
+					"Value": 100,
+					"TextValue": "100",
+					"IsMethodParameter": false
+				},
+				{
+					"Name": "П1",
+					"Value": 1,
+					"TextValue": "1",
+					"IsMethodParameter": true
+				},
+				{
+					"Name": "П2",
+					"Value": "Тест",
+					"TextValue": "Тест",
+					"IsMethodParameter": true
+				}
+			],
 			"Baseline": false,
 			"Statistics": {
 				"OriginalValues": [
@@ -207,17 +239,26 @@
 					"AllocatedMemory": 0,
 					"AllocatedMemoryPerOperation": 0
 				}
-			],
-			"Parameters": {
-				"Значение": 100,
-				"П1": 1,
-				"П2": "Тест"
-			}
+			]
 		},
 		{
 			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркВторой",
 			"Category": "",
+			"Parameters": [
+				{
+					"Name": "Значение",
+					"Value": 100,
+					"TextValue": "100",
+					"IsMethodParameter": false
+				},
+				{
+					"Name": "П",
+					"Value": [],
+					"TextValue": "Массив",
+					"IsMethodParameter": true
+				}
+			],
 			"Baseline": false,
 			"Statistics": {
 				"OriginalValues": [
@@ -351,11 +392,7 @@
 					"AllocatedMemory": 0,
 					"AllocatedMemoryPerOperation": 0
 				}
-			],
-			"Parameters": {
-				"Значение": 100,
-				"П": "Массив"
-			}
+			]
 		}
 	]
 }
