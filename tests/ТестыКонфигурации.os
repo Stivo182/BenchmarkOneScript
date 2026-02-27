@@ -1,3 +1,4 @@
+// BSLLS:LineLength-off
 // BSLLS:DuplicateStringLiteral-off
 // BSLLS:MagicNumber-off
 

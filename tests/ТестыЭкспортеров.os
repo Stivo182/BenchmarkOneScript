@@ -1,3 +1,5 @@
+// BSLLS:LineLength-off
+
 #Использовать asserts
 #Использовать delegate
 #Использовать fs
