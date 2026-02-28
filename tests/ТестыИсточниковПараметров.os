@@ -3,7 +3,6 @@
 // BSLLS:MagicNumber-off
 
 #Использовать asserts
-#Использовать delegate
 #Использовать "helpers"
 #Использовать "fixtures/benchmarks"
 

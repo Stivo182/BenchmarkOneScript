@@ -4,7 +4,6 @@
 
 #Использовать asserts
 #Использовать fluent
-#Использовать delegate
 #Использовать fs
 #Использовать "helpers"
 #Использовать "fixtures/benchmarks"

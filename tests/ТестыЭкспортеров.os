@@ -1,7 +1,6 @@
 // BSLLS:LineLength-off
 
 #Использовать asserts
-#Использовать delegate
 #Использовать fs
 #Использовать strings
 #Использовать "helpers"
