@@ -24,7 +24,7 @@ benchos run [OPTIONS] [FILE]
 | `-a`, `--artifacts` | Каталог для сохранения результатов | `-a path/to/file` |
 | `-r`, `--recursive` | Рекурсивный поиск в поддиректориях | |
 | `--settings` | Файл настроек бенчмарков в формате JSON | `--settings path/to/settings.json` |
-| `--debug` | Порт отладки | |
+| `--debug` | Порт отладки | `--debug 2801` |
 
 ## Примеры
 
