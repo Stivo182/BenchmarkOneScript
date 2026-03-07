@@ -10,21 +10,27 @@ benchos run [OPTIONS] [FILE]
 
 ### Опции
 
-| Опция | Описание | Пример |
-| --- | --- | --- | 
-| `--iterationCount` | Количество измерительных итераций | `--iterationCount 10` |
-| `--iterationTime` | Минимальное время выполнения одной итерации (мс) | `--iterationTime 500` |
-| `--warmupCount` | Количество прогревочных итераций | `--warmupCount 10` |
-| `--invocationCount` | Количество вызовов метода за итерацию | `--invocationCount 100` |
-| `--runtime` | Версии OneScript через запятую (current, stable, dev, x.x.x). | `--runtime dev,stable` |
-| `--throughput` | Стратегия выполнения [`ПропускнаяСпособность`](СтратегииЗапуска.md#пропускная-способность-throughput) | |
-| `--coldstart` | Стратегия выполнения [`ХолодныйЗапуск`](СтратегииЗапуска.md#холодный-запуск-cold-start) | |
-| `-m`, `--memory` | Включить [мониторинг использования памяти](МониторингПамяти.md) | |
-| `-e`, `--exporters` | Форматы [экспорта результатов](ЭкспортРезультатов.md) (`md`, `json`, `html`) | `-e json,html` |
-| `-a`, `--artifacts` | Каталог для сохранения результатов | `-a path/to/file` |
-| `-r`, `--recursive` | Рекурсивный поиск в поддиректориях | |
-| `--settings` | Файл настроек бенчмарков в формате JSON | `--settings path/to/settings.json` |
-| `--debug` | Порт отладки | `--debug 2801` |
+| Опция | Описание | По умолчанию | Пример |
+| --- | --- | --- | --- |
+| `--iterationCount` | Количество измерительных итераций | `15` | `--iterationCount 10` |
+| `--iterationTime` | Минимальное время выполнения одной итерации (мс) | `100` | `--iterationTime 500` |
+| `--warmupCount` | Количество прогревочных итераций | `6` | `--warmupCount 10` |
+| `--invocationCount` | Количество вызовов метода за итерацию (0 = авто) | `0` | `--invocationCount 100` |
+| `--runtime` | Версии OneScript через запятую (`current`, `stable`, `dev`, `x.x.x`) | | `--runtime dev,stable` |
+| `--throughput` | Стратегия выполнения [`ПропускнаяСпособность`](СтратегииЗапуска.md#пропускная-способность-throughput) | | |
+| `--coldstart` | Стратегия выполнения [`ХолодныйЗапуск`](СтратегииЗапуска.md#холодный-запуск-cold-start) | | |
+| `-m`, `--memory` | Включить [мониторинг использования памяти](МониторингПамяти.md) | | |
+| `-e`, `--exporters` | Форматы [экспорта результатов](ЭкспортРезультатов.md) через запятую: `md`, `json`, `html` | | `-e json, html` |
+| `-a`, `--artifacts` | Каталог для сохранения результатов | `.\BenchmarkArtifacts` | `-a path/to/dir` |
+| `-r`, `--recursive` | Рекурсивный поиск в поддиректориях | | |
+| `--settings` | Файл настроек бенчмарков в формате JSON | | `--settings path/to/settings.json` |
+| `--debug` | Порт отладки | | `--debug 2801` |
+
+### Примечания
+
+- Опции `--throughput` и `--coldstart` взаимно исключают друг друга.
+- Значение `--invocationCount 0` включает автоматический расчёт количества вызовов за итерацию.
+- Опции `--warmupCount`, `--invocationCount`, `--iterationTime` игнорируются при стратегии `--coldstart`.
 
 ## Примеры
 
@@ -44,6 +50,9 @@ benchos run /path/to/benchmarks
 # Запуск всех бенчмарков в директории, включая вложенные каталоги
 benchos run -r /path/to/benchmarks
 
-# Рекурсивный запуск с мониторингом памяти и экспортом в JSON
-benchos run -r -m -e json ./benchmarks/
+# Рекурсивный запуск с мониторингом памяти и экспортом в JSON и HTML
+benchos run -r -m -e 'json, html' ./benchmarks/
+
+# Холодный запуск с 10 итерациями
+benchos run --coldstart --iterationCount 10 /path/to/МойКласс.os
 ```
