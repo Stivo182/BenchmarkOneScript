@@ -83,6 +83,7 @@
 	],
 	"Runs": [
 		{
+			"CaseId": 1,
 			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркПервый",
 			"Category": "",
@@ -145,8 +146,8 @@
 			},
 			"Runtime": {
 				"Version": "",
-				"Alias": "",
-				"Name": ""
+				"Name": "",
+				"Baseline": false
 			},
 			"Measurements": [
 				{
@@ -242,6 +243,7 @@
 			]
 		},
 		{
+			"CaseId": 2,
 			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркВторой",
 			"Category": "",
@@ -298,8 +300,8 @@
 			},
 			"Runtime": {
 				"Version": "",
-				"Alias": "",
-				"Name": ""
+				"Name": "",
+				"Baseline": false
 			},
 			"Measurements": [
 				{
