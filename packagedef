@@ -39,4 +39,4 @@
     .РазработкаЗависитОт("1testrunner")
     .РазработкаЗависитОт("coverage")
     .РазработкаЗависитОт("strings")
-    .ИсполняемыйФайл("src/BenchmarkOneScript/cmd/main.os", "benchos")
+    .ИсполняемыйФайл("src/BenchmarkOneScript/cmd/main.os", "benchos");
