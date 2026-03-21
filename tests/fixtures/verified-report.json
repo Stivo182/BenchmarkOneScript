@@ -50,6 +50,7 @@
 		{
 			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркПервый",
+			"Title": "",
 			"Baseline": false,
 			"Category": "",
 			"ParameterSets": [
@@ -73,6 +74,7 @@
 		{
 			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркВторой",
+			"Title": "",
 			"Baseline": false,
 			"Category": "",
 			"ParameterSets": [],
