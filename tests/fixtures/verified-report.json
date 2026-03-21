@@ -52,6 +52,7 @@
 			"Method": "БенчмаркПервый",
 			"Baseline": false,
 			"Category": "",
+			"Title": "",
 			"ParameterSets": [
 				[
 					{
@@ -75,6 +76,7 @@
 			"Method": "БенчмаркВторой",
 			"Baseline": false,
 			"Category": "",
+			"Title": "",
 			"ParameterSets": [],
 			"ParameterSources": [
 				"ПараметрыДляВторого"
@@ -87,6 +89,7 @@
 			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркПервый",
 			"Category": "",
+			"Title": "",
 			"Parameters": [
 				{
 					"Name": "Значение",
@@ -247,6 +250,7 @@
 			"Type": "БенчмаркиДляЭкспорта",
 			"Method": "БенчмаркВторой",
 			"Category": "",
+			"Title": "",
 			"Parameters": [
 				{
 					"Name": "Значение",
