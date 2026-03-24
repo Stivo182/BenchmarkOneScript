@@ -39,6 +39,7 @@ benchos run [OPTIONS] [FILE]
 | `-m`, `--memory` | Включить [мониторинг использования памяти](МониторингПамяти.md) | | |
 | `-e`, `--exporters` | Форматы [экспорта результатов](ЭкспортРезультатов.md) через запятую: `md`, `json`, `html` | | `-e json,html` |
 | `-a`, `--artifacts` | Каталог для сохранения результатов | `.\BenchmarkArtifacts` | `-a path/to/dir` |
+| `-p`, `--param` | Общий параметр бенчмарков в формате `<Поле>=<Значение>`; поддерживаются `Число`, `Строка`, `Булево` | | `-p size=100 -p enabled=true -p 'text=test value'` |
 | `-r`, `--recursive` | Рекурсивный поиск в поддиректориях | | |
 | `--settings` | Файл настроек бенчмарков в формате JSON | | `--settings path/to/settings.json` |
 | `--debug` | Порт отладки | | `--debug 2801` |
@@ -48,6 +49,7 @@ benchos run [OPTIONS] [FILE]
 - Опции `--throughput` и `--coldstart` взаимно исключают друг друга.
 - Значение `--invocationCount 0` включает автоматический расчёт количества вызовов за итерацию.
 - Опции `--warmupCount`, `--invocationCount`, `--iterationTime` игнорируются при стратегии `--coldstart`.
+- Повторяйте `-p` / `--param`, чтобы передать несколько общих параметров.
 
 ## Примеры
 
@@ -75,4 +77,7 @@ benchos run -r -m -e 'json, html' ./benchmarks/
 
 # Холодный запуск с 10 итерациями
 benchos run --coldstart --iterationCount 10 /path/to/МойКласс.os
+
+# Запуск с общими параметрами бенчмарков
+benchos run -p field1=1 -p "field2=test value" -p field3=true /path/to/МойКласс.os
 ```
