@@ -1,4 +1,5 @@
 // BSLLS:LineLength-off
+// BSLLS:NestedFunctionInParameters-off
 
 #Использовать asserts
 #Использовать fs
