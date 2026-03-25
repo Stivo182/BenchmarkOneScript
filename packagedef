@@ -4,7 +4,7 @@
 КонецПроцедуры
 
 Описание.Имя("benchmark")
-    .Версия("0.7.0")
+    .Версия("0.8.0")
     .Автор("Dmitry Ivanov")
     .АдресАвтора("https://github.com/Stivo182")
     .АдресРепозитория("https://github.com/Stivo182/BenchmarkOneScript")
