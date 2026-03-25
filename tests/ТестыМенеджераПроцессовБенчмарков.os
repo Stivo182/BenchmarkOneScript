@@ -1,4 +1,5 @@
 // BSLLS:LineLength-off
+// BSLLS:MagicNumber-off
 
 #Использовать asserts
 #Использовать tempfiles
