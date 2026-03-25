@@ -52,6 +52,19 @@ benchos run [OPTIONS] [FILE]
 - Опции `--warmupCount`, `--invocationCount`, `--iterationTime` игнорируются при стратегии `--coldstart`.
 - Повторяйте `-p` / `--param`, чтобы передать несколько общих параметров.
 
+### Переменные среды
+
+#### `BENCHOS_PROCESS_TIMEOUT`
+
+Таймаут ожидания завершения дочернего процесса бенчмарка в секундах (По умолчанию: `600` секунд).
+
+Пример:
+
+```powershell
+$env:BENCHOS_PROCESS_TIMEOUT=120
+benchos run /path/to/МойКласс.os
+```
+
 ## Примеры
 
 ```bash
