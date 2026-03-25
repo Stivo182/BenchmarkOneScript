@@ -1,5 +1,6 @@
 // BSLLS:LineLength-off
 // BSLLS:MagicNumber-off
+// BSLLS:NestedFunctionInParameters-off
 
 #Использовать asserts
 #Использовать "helpers"
