@@ -1,4 +1,6 @@
-﻿// BSLLS:LineLength-off
+﻿// BSLLS:DuplicateStringLiteral-off
+// BSLLS:MagicNumber-off
+// BSLLS:LineLength-off
 
 #Использовать asserts
 #Использовать fs
@@ -317,4 +319,3 @@
 КонецФункции
 
 #КонецОбласти
-
