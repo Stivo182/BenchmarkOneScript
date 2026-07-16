@@ -1,4 +1,5 @@
 // BSLLS:MagicDate-off
+// BSLLS:MagicNumber-off
 
 #Использовать asserts
 #Использовать "helpers"
