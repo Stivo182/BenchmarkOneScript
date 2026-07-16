@@ -15,5 +15,8 @@ oscript_modules/
 
 .vs/
 
+# Git
+.worktrees/
+
 # Benchmark
 BenchmarkArtifacts/
