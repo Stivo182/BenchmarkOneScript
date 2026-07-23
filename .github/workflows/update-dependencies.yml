@@ -13,5 +13,6 @@ jobs:
       - name: Обновление зависимостей
         uses: Stivo182/depos-action@v1
         with:
+          target: patch
           message-prefix: build(deps)
           token: ${{ secrets.PUSH_TOKEN }}
