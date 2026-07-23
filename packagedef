@@ -9,7 +9,7 @@
     .АдресАвтора("https://github.com/Stivo182")
     .АдресРепозитория("https://github.com/Stivo182/BenchmarkOneScript")
     .Описание("Бенчмаркинг на OneScript")
-    .ВерсияСреды("1.9.3")
+    .ВерсияСреды("1.9.4")
     .ВключитьФайл("src/BenchmarkOneScript")
     .ВключитьФайл("Components")
     .ВключитьФайл("samples")
