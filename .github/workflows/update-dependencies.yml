@@ -3,7 +3,18 @@ name: Обновление зависимостей
 on:
   schedule:
     - cron: '0 0 * * 1'
+
   workflow_dispatch:
+    inputs:
+      target:
+        description: 'Тип целевой версии'
+        required: true
+        default: patch
+        type: choice
+        options:
+          - latest
+          - minor
+          - patch
 
 jobs:
   update-dependencies:
@@ -13,6 +24,6 @@ jobs:
       - name: Обновление зависимостей
         uses: Stivo182/depos-action@v1
         with:
-          target: patch
+          target: ${{ inputs.target || 'patch' }}
           message-prefix: build(deps)
           token: ${{ secrets.PUSH_TOKEN }}
