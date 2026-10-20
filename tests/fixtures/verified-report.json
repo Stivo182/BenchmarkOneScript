@@ -1,4 +1,4 @@
-{
+﻿{
 	"HostEnvironmentInfo": {
 		"BenchmarkOneScriptVersion": "0.1.x-mock",
 		"OsVersion": "Microsoft Windows NT 10.0.x.mock",
@@ -11,6 +11,13 @@
 	"Configuration": {
 		"Strategy": "ПропускнаяСпособность",
 		"IterationCount": 10,
+		"AdaptiveIterations": false,
+		"MaxRelativeError": 0.1,
+		"MinAdaptiveIterationCount": 15,
+		"MaxAdaptiveIterationCount": 100,
+		"StatisticalComparison": false,
+		"StatisticalComparisonRelativeThreshold": 0.15,
+		"StatisticalComparisonSignificanceLevel": 0.0005,
 		"InvocationCount": 1,
 		"WarmupCount": 1,
 		"MinIterationTime": 10,
@@ -132,6 +139,11 @@
 				"Max": 1000000,
 				"StdDev": 0,
 				"StdErr": 0,
+				"ConfidenceIntervalLower": 1000000,
+				"ConfidenceIntervalUpper": 1000000,
+				"Error": 0,
+				"ErrorPercent": 0,
+				"OutlierCount": 0,
 				"Ops": 1000,
 				"BytesAllocatedPerOperation": 0,
 				"Percentiles": {
@@ -159,7 +171,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -168,7 +181,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -177,7 +191,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -186,7 +201,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -195,7 +211,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -204,7 +221,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -213,7 +231,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -222,7 +241,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -231,7 +251,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -240,9 +261,12 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				}
-			]
+			],
+			"Significance": "",
+			"Warnings": []
 		},
 		{
 			"CaseId": 2,
@@ -286,6 +310,11 @@
 				"Max": 1000000,
 				"StdDev": 0,
 				"StdErr": 0,
+				"ConfidenceIntervalLower": 1000000,
+				"ConfidenceIntervalUpper": 1000000,
+				"Error": 0,
+				"ErrorPercent": 0,
+				"OutlierCount": 0,
 				"Ops": 1000,
 				"BytesAllocatedPerOperation": 0,
 				"Percentiles": {
@@ -313,7 +342,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -322,7 +352,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -331,7 +362,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -340,7 +372,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -349,7 +382,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -358,7 +392,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -367,7 +402,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -376,7 +412,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -385,7 +422,8 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				},
 				{
 					"Stage": "Измерение",
@@ -394,9 +432,12 @@
 					"Nanoseconds": 1000000,
 					"NanosecondsPerOperation": 1000000,
 					"AllocatedMemory": 0,
-					"AllocatedMemoryPerOperation": 0
+					"AllocatedMemoryPerOperation": 0,
+					"Outlier": false
 				}
-			]
+			],
+			"Significance": "",
+			"Warnings": []
 		}
 	]
 }
