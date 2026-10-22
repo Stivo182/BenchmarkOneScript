@@ -32,6 +32,11 @@ benchos run [OPTIONS] [FILE]
 | Опция | Описание | По умолчанию | Пример |
 | --- | --- | --- | --- |
 | `--iterationCount` | Количество измерительных итераций | `15` | `--iterationCount 10` |
+| `--maxRelativeError` | Включает адаптивные итерации и задаёт целевую относительную погрешность | `0.1`* | `--maxRelativeError 0.1` |
+| `--minAdaptiveIterationCount` | Включает адаптивные итерации и задаёт минимальное количество измерений | `15`* | `--minAdaptiveIterationCount 15` |
+| `--maxAdaptiveIterationCount` | Включает адаптивные итерации и задаёт максимальное количество измерений | `100`* | `--maxAdaptiveIterationCount 100` |
+| `--practicalSignificanceThreshold` | Включает статистическое сравнение и задаёт относительный порог практической значимости | `0.15`* | `--practicalSignificanceThreshold 0.15` |
+| `--significanceLevel` | Включает статистическое сравнение и задаёт уровень значимости | `0.01`* | `--significanceLevel 0.01` |
 | `--iterationTime` | Минимальное время выполнения одной итерации (мс) | `100` | `--iterationTime 500` |
 | `--warmupCount` | Количество прогревочных итераций | `6` | `--warmupCount 10` |
 | `--invocationCount` | Количество вызовов метода за итерацию (0 = авто) | `0` | `--invocationCount 100` |
@@ -52,11 +57,15 @@ benchos run [OPTIONS] [FILE]
 
 Подробный формат файла, допустимые поля и правила приоритета: [формат настроек запуска](ФорматНастроекЗапуска.md).
 
+\* Значение используется при включении соответствующего режима и отсутствии переопределения в `--settings` или аннотациях бенчмарка.
+
 ### Примечания
 
 - Опции `--throughput` и `--coldstart` взаимно исключают друг друга.
 - Значение `--invocationCount 0` включает автоматический расчёт количества вызовов за итерацию.
 - Опции `--warmupCount`, `--invocationCount`, `--iterationTime` игнорируются при стратегии `--coldstart`.
+- Любая из опций адаптивных итераций включает адаптивный режим; в нём ограничение задаёт `--maxAdaptiveIterationCount`, а не `--iterationCount`.
+- Любая из опций статистического сравнения включает его.
 - Опция `-e` / `--exporters` заменяет экспортеры из `--settings` и аннотаций бенчмарка.
 - Повторяйте `-p` / `--param`, чтобы передать несколько общих параметров.
 - Параметры `-p` / `--param` имеют наивысший приоритет: они переопределяют одноимённые параметры и источники параметров из `--settings` и аннотаций бенчмарка, сохраняя параметры с другими именами.
@@ -106,6 +115,12 @@ benchos run -r -m -e 'json, html' ./benchmarks/
 
 # Холодный запуск с 10 итерациями
 benchos run --coldstart --iterationCount 10 /path/to/МойКласс.os
+
+# Адаптивные итерации с целевой погрешностью 5%
+benchos run --maxRelativeError 0.05 --minAdaptiveIterationCount 15 --maxAdaptiveIterationCount 100 /path/to/МойКласс.os
+
+# Статистическое сравнение с эталоном
+benchos run --practicalSignificanceThreshold 0.15 --significanceLevel 0.01 /path/to/МойКласс.os
 
 # Запуск с общими параметрами бенчмарков
 benchos run -p Количество=100 -p Количество=500 -p "СтроковойПараметр=test value" -p Флаг=true /path/to/МойКласс.os
