@@ -17,7 +17,7 @@
 		"MaxAdaptiveIterationCount": 100,
 		"StatisticalComparison": false,
 		"StatisticalComparisonRelativeThreshold": 0.15,
-		"StatisticalComparisonSignificanceLevel": 0.0005,
+		"StatisticalComparisonSignificanceLevel": 0.01,
 		"InvocationCount": 1,
 		"WarmupCount": 1,
 		"MinIterationTime": 10,

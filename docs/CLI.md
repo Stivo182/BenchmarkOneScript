@@ -36,7 +36,7 @@ benchos run [OPTIONS] [FILE]
 | `--minAdaptiveIterationCount` | Включает адаптивные итерации и задаёт минимальное количество измерений | `15`* | `--minAdaptiveIterationCount 15` |
 | `--maxAdaptiveIterationCount` | Включает адаптивные итерации и задаёт максимальное количество измерений | `100`* | `--maxAdaptiveIterationCount 100` |
 | `--practicalSignificanceThreshold` | Включает статистическое сравнение и задаёт относительный порог практической значимости | `0.15`* | `--practicalSignificanceThreshold 0.15` |
-| `--significanceLevel` | Включает статистическое сравнение и задаёт уровень значимости | `0.0005`* | `--significanceLevel 0.0005` |
+| `--significanceLevel` | Включает статистическое сравнение и задаёт уровень значимости | `0.01`* | `--significanceLevel 0.01` |
 | `--iterationTime` | Минимальное время выполнения одной итерации (мс) | `100` | `--iterationTime 500` |
 | `--warmupCount` | Количество прогревочных итераций | `6` | `--warmupCount 10` |
 | `--invocationCount` | Количество вызовов метода за итерацию (0 = авто) | `0` | `--invocationCount 100` |
@@ -120,7 +120,7 @@ benchos run --coldstart --iterationCount 10 /path/to/МойКласс.os
 benchos run --maxRelativeError 0.05 --minAdaptiveIterationCount 15 --maxAdaptiveIterationCount 100 /path/to/МойКласс.os
 
 # Статистическое сравнение с эталоном
-benchos run --practicalSignificanceThreshold 0.15 --significanceLevel 0.0005 /path/to/МойКласс.os
+benchos run --practicalSignificanceThreshold 0.15 --significanceLevel 0.01 /path/to/МойКласс.os
 
 # Запуск с общими параметрами бенчмарков
 benchos run -p Количество=100 -p Количество=500 -p "СтроковойПараметр=test value" -p Флаг=true /path/to/МойКласс.os
