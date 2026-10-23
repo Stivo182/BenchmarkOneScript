@@ -11,7 +11,6 @@
 	"Configuration": {
 		"Strategy": "ПропускнаяСпособность",
 		"IterationCount": 10,
-		"AdaptiveIterations": false,
 		"MaxRelativeError": 0.1,
 		"MinAdaptiveIterationCount": 15,
 		"MaxAdaptiveIterationCount": 100,
